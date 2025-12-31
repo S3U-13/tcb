@@ -1,7 +1,7 @@
 "use client";
 import { div } from "framer-motion/client";
-import React, { useState } from "react";
-
+import React from "react";
+import AddPatientModal from "./add-new-patient/page";
 import { Button } from "@heroui/button";
 
 import {
@@ -21,15 +21,20 @@ import {
   DropdownMenu,
   DropdownTrigger,
 } from "@heroui/dropdown";
-import { Edit, Eye, XCircle } from "@deemlol/next-icons";
+import { PlusCircle } from "@deemlol/next-icons";
+import useHook from "./useHook";
 
 export default function page() {
+  const { openModalAddPatient, setOpenModalAddPatient } = useHook();
   return (
     <div className="space-y-6 mt-6 ">
+      <AddPatientModal
+        isOpen={openModalAddPatient}
+        onClose={() => setOpenModalAddPatient(false)}
+      />
       <h1 className="text-center text-xl">
         <strong>Hospital PPK Insurance Form</strong>
       </h1>
-
       <div className="p-4 space-y-2 border border-divider rounded-xl bg-gray-100 dark:bg-[#0e0e11]">
         <div className="flex justify-between gap-2 items-center">
           <Input
@@ -59,33 +64,18 @@ export default function page() {
             type="search"
           />
           <div className="flex items-center gap-2">
-            <Dropdown>
-              <DropdownTrigger>
-                <Button
-                  className="capitalize"
-                  variant="flat"
-                  endContent={
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      className="size-4"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  }
-                >
-                  Forms Type
-                </Button>
-              </DropdownTrigger>
-              <DropdownMenu aria-label="Status filter" selectionMode="multiple">
-                <DropdownItem>dsfadsf</DropdownItem>
-              </DropdownMenu>
-            </Dropdown>
+            <Button
+              className="capitalize"
+              color="primary"
+              variant="flat"
+              startContent={<PlusCircle size={20} />}
+              onPress={() => {
+                setOpenModalAddPatient(true);
+              }}
+            >
+              เพิ่มผู้ป่วยใหม่
+            </Button>
+
             <Dropdown>
               <DropdownTrigger>
                 <Button

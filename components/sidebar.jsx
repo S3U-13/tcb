@@ -75,7 +75,7 @@ export default function Sidebar({ isOpen }) {
         {
           label_id: 4,
           label_name: "Approve ข้อมูลทะเบียนมะเร็ง",
-          link: "/user/tcb/approve",
+          link: "/user/tcb/tcb-approve-page",
         },
       ],
     },
@@ -184,7 +184,7 @@ export default function Sidebar({ isOpen }) {
               color="success"
               radius="full"
               size="lg"
-              // src={getAvatarSrc(user?.role_id)}
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBJ1cM6gCghQwI5w0jX7hHIFMUqPicfZTwpQ&"
             />
             <div>
               <p>ชื่อ</p>

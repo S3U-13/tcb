@@ -39,11 +39,11 @@ export default function RootLayout({ children }) {
         )}
       >
         {/* <AuthProvider> */}
-          <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-            <div className="">
-              <main>{children}</main>
-            </div>
-          </Providers>
+        <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
+          <div className="">
+            <main>{children}</main>
+          </div>
+        </Providers>
         {/* </AuthProvider> */}
       </body>
     </html>

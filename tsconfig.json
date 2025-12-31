@@ -31,7 +31,8 @@
     "app/page.jsx",
     "app/layout.jsx",
     ".next/dev/types/**/*.ts",
-    "components/navbar.jsx"
+    "components/navbar.jsx",
+    "components/theme-switch.jsx"
   ],
   "exclude": ["node_modules"]
 }
