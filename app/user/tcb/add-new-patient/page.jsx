@@ -20,6 +20,7 @@ export default function page({ isOpen, onClose }) {
         size="full"
         radius="none"
         backdrop="transparent"
+        classNames={{body: "overflow-y-scroll"}}
       >
         <ModalContent>
           {(onClose) => (
