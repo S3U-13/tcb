@@ -1,13 +1,13 @@
 "use client";
 import { Accordion, AccordionItem } from "@heroui/accordion";
 import { Button } from "@heroui/button";
-import { Link } from "@heroui/link";
 import { usePathname, useRouter } from "next/navigation";
 import React, { useEffect, useState, useMemo } from "react";
 import { ThemeSwitch } from "./theme-switch";
 import { div } from "framer-motion/client";
 import { ScrollShadow } from "@heroui/scroll-shadow";
 import { Avatar } from "@heroui/avatar";
+import { Link } from "@heroui/link";
 // import { useAuth } from "../context/AuthContext";
 
 export default function Sidebar({ isOpen }) {
@@ -280,7 +280,7 @@ export default function Sidebar({ isOpen }) {
           </div>
 
           <div className="mt-auto">
-            <Button className="w-full" color="danger">
+            <Button as={Link} href="/" className="w-full" color="danger">
               Logout
             </Button>
           </div>

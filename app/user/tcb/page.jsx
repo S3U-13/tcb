@@ -135,35 +135,6 @@ export default function page() {
                 <DropdownItem className="capitalize">adsfadsfadfs</DropdownItem>
               </DropdownMenu>
             </Dropdown>
-            <Dropdown>
-              <DropdownTrigger>
-                <Button color="primary" variant="solid" size="md">
-                  PDF IPD & OPD
-                </Button>
-              </DropdownTrigger>
-              <DropdownMenu aria-label="Static Actions">
-                {/* <DropdownItem key="IPD" onPress={() => setOpenModalIPD(true)}>
-                  IPD FORM
-                </DropdownItem>
-                <DropdownItem key="OPD" onPress={() => setOpenModalOPD(true)}>
-                  OPD FORM
-                </DropdownItem> */}
-                <DropdownItem
-                  key="IPD"
-                  href="/api/generate-ipd-pdf"
-                  target="_blank"
-                >
-                  IPD FORM
-                </DropdownItem>
-                <DropdownItem
-                  key="OPD"
-                  href="/api/generate-opd-pdf"
-                  target="_blank"
-                >
-                  OPD FORM
-                </DropdownItem>
-              </DropdownMenu>
-            </Dropdown>
           </div>
         </div>
         <div className="flex justify-between items-center">
